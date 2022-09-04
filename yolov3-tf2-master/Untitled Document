@@ -1,0 +1,6 @@
+python train.py --batch_size 4 --dataset /home/yun/Downloads/yolov3-tf2-master/data/voc2012_train_shoe.tfrecord --val_dataset /home/yun/Downloads/yolov3-tf2-master/data/voc2012_val_shoe.tfrecord --classes /home/yun/Downloads/yolov3-tf2-master/data/shoe_voc2012.names --epochs 20 --mode fit --transfer fine_tune --weights /home/yun/Downloads/yolov3-tf2-master/checkpoints/yolov3-tiny.tf --tiny
+python detect.py --classes ./data/shoe_voc2012.names --weights ./checkpoints/yolov3_train_20.tf --tiny --image ./data/01.jpg --yolo_score_threshold 0.3
+python detect_video.py --video 1 --classes ./data/shoe_voc2012.names --weights ./checkpoints/yolov3_train_20.tf --tiny
+python detect_video.py --video /home/yun/Downloads/shoe-images/shoes/01.avi --classes ./data/shoe_voc2012.names --weights ./checkpoints/yolov3_train_20.tf --tiny
+
+
